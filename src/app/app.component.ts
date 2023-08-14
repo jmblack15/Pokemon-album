@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Pokemon-album';
+  isNavMobileActive : boolean = false
+
+
+  toggleNavMobile () {
+    this.isNavMobileActive = !this.isNavMobileActive;
+    console.log(this.isNavMobileActive);
+  }
 }
+
+
