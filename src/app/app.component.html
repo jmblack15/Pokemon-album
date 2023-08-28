@@ -43,6 +43,11 @@
 
 <main>
   <router-outlet></router-outlet>
+  <div *ngFor="let pokemon of listPokemons">
+    <p>{{pokemon.name}}</p>
+  </div>
+
+
 </main>
 
 <footer>

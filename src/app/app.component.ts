@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GetPokemonsService } from './services/get-pokemons.service';
 
 @Component({
   selector: 'app-root',
@@ -6,10 +7,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  isNavMobileActive : boolean = false
+
+  constructor(
+    private getPokemonService: GetPokemonsService
+  ) { }
 
 
-  toggleNavMobile () {
+  isNavMobileActive: boolean = false
+  listPokemons: any;
+
+  ngOnInit(): void {
+    this.getPokemonService.getAllPokemons()
+      .subscribe((data: any) => {
+        this.listPokemons = data.results;
+      })
+  }
+
+  toggleNavMobile() {
     this.isNavMobileActive = !this.isNavMobileActive;
     console.log(this.isNavMobileActive);
   }
