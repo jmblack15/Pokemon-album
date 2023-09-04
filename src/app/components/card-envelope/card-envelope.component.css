@@ -1,0 +1,11 @@
+.card_envelope{
+  width: 310px;
+  height: 461px;
+  background-image: url('../../../assets/card-back.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin: 0 auto;
+  cursor: pointer;
+  border-radius: 15px;
+}

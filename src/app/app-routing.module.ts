@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AlbumComponent } from './components/album/album.component';
-import { SheetComponent } from './components/sheet/sheet.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { InfoComponent } from './components/info/info.component';
+import { AlbumComponent } from './pages/album/album.component';
+import { GetSheetsComponent } from './pages/get-sheets/get-sheets.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { InfoComponent } from './pages/info/info.component';
 
 const routes: Routes = [
   { path: 'album', component: AlbumComponent },
-  { path: 'sheet', component: SheetComponent },
+  { path: 'sheets', component: GetSheetsComponent },
   { path: '', component: InfoComponent, pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
