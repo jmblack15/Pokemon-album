@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AlbumComponent {
 
+  ListCards: number = 1281;
+
+  range(num: number): number[] {
+    return new Array(num);
+  }
 }
